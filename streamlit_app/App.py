@@ -13,7 +13,7 @@ st.write(current_directory)
 
 # Ignorer tous les avertissements
 warnings.filterwarnings('ignore')
-data = "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation.csv"
+data = "streamlit_app/Resultas/data_evaluation.csv"
 data = pd.read_csv(data)
 training = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training.csv"
 history = pd.read_csv(training)

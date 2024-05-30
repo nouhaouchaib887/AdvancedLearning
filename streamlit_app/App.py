@@ -2,23 +2,23 @@ import streamlit as st
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
-from utils import display_multiple_images, plot_train_data_distribution, display_multiple_images_2, evaluation_weighted, evaluation_macro, matrice_confusion, report_to_df, training_plots_accuracy, training_plots_loss, classification_rapport, make_prediction, display_multiple_images_3
+from utils import display_multiple_images, plot_train_data_distribution, display_multiple_images_2, evaluation_weighted, evaluation_macro, matrice_confusion, report_to_df, training_plots_accuracy, training_plots_loss, classification_rapport
 
 import warnings
 
 # Ignorer tous les avertissements
 warnings.filterwarnings('ignore')
-data = "C:/Users/HP/Downloads/data_evaluation.csv"
+data = "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation.csv"
 data = pd.read_csv(data)
-training = "C:/Users/HP/Downloads/training.csv"
+training = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training.csv"
 history = pd.read_csv(training)
-data_tl =  "C:/Users/HP/Downloads/data_evaluation1.csv"
+data_tl =  "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation1.csv"
 data_tl = pd.read_csv(data_tl)
-training_tl = "C:/Users/HP/Downloads/training1.csv"
+training_tl = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training1.csv"
 history_tl = pd.read_csv(training_tl)
-data_ssl = "C:/Users/HP/Downloads/data_evaluation2.csv"
+data_ssl = "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation2.csv"
 data_ssl = pd.read_csv(data_ssl)
-training_ssl = "C:/Users/HP/Downloads/training2.csv"
+training_ssl = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training2.csv"
 history_ssl =  pd.read_csv(training_ssl)
 resultats = {"Supervised learning": {"data": data , "training": history}, "Transfert learning": {"data": data_tl , "training": history_tl}, "Self-supervised learning": {"data": data_ssl , "training": history_ssl}}
 st.sidebar.title("Sommaire")
@@ -84,16 +84,13 @@ if page == pages[3]:
     df = df.set_index("Class")
     
     st.table(df)
-    path_image = "C:/Users/HP/Downloads/test/img5.jpg"
-    pred = make_prediction( path_image)
-    st.write(pred)
 if page == pages[4]:
 
     st.write("## Résultas")
     st.write("##### Évaluation Équilibrée : Analyse des Performances par Macro-Moyenne")
-    st.image("C:/Users/HP/Desktop/result1.png")
+    st.image("/mount/src/AdvancedLearning/streamlit_app/image/result1.png")
     st.write("##### Performances Pondérées en Fonction de la Fréquence des Classes")
-    st.image("C:/Users/HP/Desktop/result2.png")
+    st.image("/mount/src/AdvancedLearning/streamlit_app/image/result2.png")
     fig = display_multiple_images_3()
     st.pyplot(fig)
 

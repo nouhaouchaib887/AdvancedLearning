@@ -66,7 +66,7 @@ if page == pages[3]:
     st.write("## Modélisation")
     Learning_approach = st.selectbox (label = "Approche", options = ["Supervised learning", "Transfert learning", "Self-supervised learning"])
     if Learning_approach =="Supervised learning":
-        st.image("streamlit_app/image/supervised_learning")
+        st.image("streamlit_app/image/supervised_learning.png")
     elif Learning_approach == "Transfert learning":
         st.image("streamlit_app/image/Transfert learning.png")
     else:

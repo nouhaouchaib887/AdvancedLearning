@@ -7,23 +7,20 @@ from utils import display_multiple_images, plot_train_data_distribution, display
 
 import warnings
 
-current_directory = os.getcwd()
-st.write(current_directory)
-
 
 # Ignorer tous les avertissements
 warnings.filterwarnings('ignore')
 data = "streamlit_app/Resultas/data_evaluation.csv"
 data = pd.read_csv(data)
-training = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training.csv"
+training = "streamlit_app/Resultas/training.csv"
 history = pd.read_csv(training)
-data_tl =  "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation1.csv"
+data_tl =  "streamlit_app/Resultas/data_evaluation1.csv"
 data_tl = pd.read_csv(data_tl)
-training_tl = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training1.csv"
+training_tl = "streamlit_app/Resultas/training1.csv"
 history_tl = pd.read_csv(training_tl)
-data_ssl = "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation2.csv"
+data_ssl = "streamlit_app/Resultas/data_evaluation2.csv"
 data_ssl = pd.read_csv(data_ssl)
-training_ssl = "/mount/src/AdvancedLearning/streamlit_app/Resultas/training2.csv"
+training_ssl = "streamlit_app/Resultas/training2.csv"
 history_ssl =  pd.read_csv(training_ssl)
 resultats = {"Supervised learning": {"data": data , "training": history}, "Transfert learning": {"data": data_tl , "training": history_tl}, "Self-supervised learning": {"data": data_ssl , "training": history_ssl}}
 st.sidebar.title("Sommaire")
@@ -93,9 +90,9 @@ if page == pages[4]:
 
     st.write("## Résultas")
     st.write("##### Évaluation Équilibrée : Analyse des Performances par Macro-Moyenne")
-    st.image("/mount/src/AdvancedLearning/streamlit_app/image/result1.png")
+    st.image("streamlit_app/image/result1.png")
     st.write("##### Performances Pondérées en Fonction de la Fréquence des Classes")
-    st.image("/mount/src/AdvancedLearning/streamlit_app/image/result2.png")
+    st.image("streamlit_app/image/result2.png")
     fig = display_multiple_images_3()
     st.pyplot(fig)
 

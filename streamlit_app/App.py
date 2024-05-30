@@ -22,7 +22,7 @@ data_ssl = "streamlit_app/Resultas/data_evaluation2.csv"
 data_ssl = pd.read_csv(data_ssl)
 training_ssl = "streamlit_app/Resultas/training2.csv"
 history_ssl =  pd.read_csv(training_ssl)
-resultats = {"Supervised learning": {"data": data , "training": history}, "Transfert learning": {"data": data_tl , "training": history_tl}, "Self-supervised learning": {"data": data_ssl , "training": history_ssl}}
+resultats = {"Supervised learning": {"data": data , "training": history}, "Transfer learning": {"data": data_tl , "training": history_tl}, "Self-supervised learning": {"data": data_ssl , "training": history_ssl}}
 st.sidebar.title("Sommaire")
 
 pages = ["Introduction", "Paradigmes d'apprentissage","Préparation des données","Modélisation","Résultats", "Conclusion"]
@@ -64,10 +64,10 @@ if page == pages[2]:
     st.pyplot(fig3)
 if page == pages[3]:
     st.write("## Modélisation")
-    Learning_approach = st.selectbox (label = "Approche", options = ["Supervised learning", "Transfert learning", "Self-supervised learning"])
+    Learning_approach = st.selectbox (label = "Approche", options = ["Supervised learning", "Transfer learning", "Self-supervised learning"])
     if Learning_approach =="Supervised learning":
         st.image("streamlit_app/image/supervised_learning.png")
-    elif Learning_approach == "Transfert learning":
+    elif Learning_approach == "Transfer learning":
         st.image("streamlit_app/image/Transfert learning.png")
     else:
         st.image("streamlit_app/image/Self supervised learning.png")

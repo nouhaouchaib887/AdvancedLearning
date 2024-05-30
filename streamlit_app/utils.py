@@ -86,18 +86,29 @@ def plot_train_data_distribution():
     return fig
 
 def display_multiple_images_2():
-   image_paths = []
-   for image_file in os.listdir(train_dir0):
+    image_paths = []
+    
+    
+         
+    for image_file in os.listdir(train_dir0):
                 image_path = os.path.join(train_examples, image_file)
                 image_paths.append(image_path)
+             
+
+    
+
+
+            
     fig, axes = plt.subplots(2,5, figsize=(5,5))
     axes = axes.flatten()
     for idx, (img_path, ax) in enumerate(zip(image_paths, axes)):
              img = cv2.imread(img_path)
+             
              ax.imshow(img)
              ax.axis('off')
              fig = plt.tight_layout()
     return fig
+    
 def training_plots_accuracy(history):
      x = px.line(data_frame= history , y= ["accuracy" , "val_accuracy"] ,markers = True )
      x.update_xaxes(title="Number of Epochs")

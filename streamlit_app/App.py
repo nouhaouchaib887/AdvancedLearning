@@ -99,9 +99,6 @@ if page == pages[4]:
     st.image("streamlit_app/image/result1.png")
     st.write("##### Performances Pondérées en Fonction de la Fréquence des Classes")
     st.image("streamlit_app/image/result2.png")
-    fig = display_multiple_images_3()
-    st.pyplot(fig)
-
 
 
     

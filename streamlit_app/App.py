@@ -6,6 +6,10 @@ from utils import display_multiple_images, plot_train_data_distribution, display
 
 import warnings
 
+current_directory = os.getcwd()
+st.Write(urrent_directory)
+
+
 # Ignorer tous les avertissements
 warnings.filterwarnings('ignore')
 data = "/mount/src/AdvancedLearning/streamlit_app/Resultas/data_evaluation.csv"

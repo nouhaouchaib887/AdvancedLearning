@@ -35,7 +35,7 @@ BATCH_SIZE = 64
 
 def display_multiple_images():
     image_paths = []
-    titles = ['Fearful', 'Sad', 'Disgusted', 'Neutral', 'Angry', 'Fearful', "Happy", ''Disgusted', 'Surprised', 'Angry']
+    titles = ['Fearful', 'Sad', 'Disgusted', 'Neutral', 'Angry', 'Fearful', "Happy", 'Disgusted', 'Surprised', 'Angry']
     
          
     for image_file in os.listdir(train_examples):

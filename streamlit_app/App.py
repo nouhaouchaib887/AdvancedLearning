@@ -8,7 +8,7 @@ from utils import display_multiple_images, plot_train_data_distribution, display
 import warnings
 
 current_directory = os.getcwd()
-st.write(urrent_directory)
+st.write(current_directory)
 
 
 # Ignorer tous les avertissements

@@ -62,7 +62,7 @@ def plot_train_data_distribution():
     # Créer le graphique à barres
     fig = px.bar(
         x=CLASS_LABELS_EMOJIS,
-        y = np.load('/mount/src/Advanced_learning/streamlit_app/resultats/data_distibution.npy'),
+        y = np.load('streamlit_app/Resultas/data_distibution.npy'),
         color= np.array([0, 1, 2, 3, 4, 5, 6]),
         color_continuous_scale="Emrld"
     )

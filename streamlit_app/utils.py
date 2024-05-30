@@ -86,19 +86,14 @@ def plot_train_data_distribution():
     return fig
 
 def display_multiple_images_2():
-    image_paths = []
-         
-   # Chemin complet vers le sous-dossier
-    if os.path.isdir(train_dir0):  # Vérifier que c'est bien un dossier
-        # Parcourir chaque image dans le sous-dossier
-                for image_file in (os.listdir(train_dir0)) :
-                    image_path = os.path.join(train_dir0, image_file)
-                    image_paths.append(image_path)         
+   image_paths = []
+   for image_file in os.listdir(train_dir0):
+                image_path = os.path.join(train_examples, image_file)
+                image_paths.append(image_path)
     fig, axes = plt.subplots(2,5, figsize=(5,5))
     axes = axes.flatten()
-    for img_path, ax in zip(image_paths, axes):
+    for idx, (img_path, ax) in enumerate(zip(image_paths, axes)):
              img = cv2.imread(img_path)
-             
              ax.imshow(img)
              ax.axis('off')
              fig = plt.tight_layout()

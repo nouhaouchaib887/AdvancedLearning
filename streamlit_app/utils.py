@@ -17,8 +17,8 @@ from tensorflow.keras.models import load_model
 warnings.filterwarnings('ignore')
 
 #Parameters
-train_dir0 = "/mount/src/AdvancedLearning/streamlit_app/image/imd_wiki_examples"
-train_examples = "/mount/src/AdvancedLearning/streamlit_app/image/train_example"
+train_dir0 = "streamlit_app/image/imd_wiki_examples"
+train_examples = "streamlit_app/image/train_example"
 
 
 

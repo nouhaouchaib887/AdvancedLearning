@@ -94,12 +94,13 @@ if page == pages[3]:
     st.table(df)
 if page == pages[4]:
 
-    st.write("## Résultas")
+    st.write("## Résultats")
     st.write("##### Évaluation Équilibrée : Analyse des Performances par Macro-Moyenne")
     st.image("streamlit_app/image/result1.png")
     st.write("##### Performances Pondérées en Fonction de la Fréquence des Classes")
     st.image("streamlit_app/image/result2.png")
 if page == pages[5]:
+    st.write("## Conclusion")
     st.write("Dans notre tentative de construire un système de détection des émotions à travers différentes approches, nous avons observé des performances légèrement différentes entre les méthodes. Cependant, il est apparu que l'utilisation de l'apprentissage auto-supervisé(Self supervised learning), en particulier avec une tâche de prétexte consistant à détecter la rotation sur un dataset de 100 000 images de visages, permet d'améliorer les performances du modèle.")
     st.write("Pour poursuivre l'amélioration de ce système, des stratégies telles que l'augmentation des données et le développement d'un modèle plus volumineux avec davantage de paramètres pourraient être envisagées. Cependant, ces approches nécessitent des investissements substantiels en termes de ressources et de temps, ce qui peut représenter un défi logistique et financier.")
 

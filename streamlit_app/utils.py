@@ -98,7 +98,6 @@ def display_multiple_images_2():
     axes = axes.flatten()
     for img_path, ax in zip(image_paths, axes):
              img = cv2.imread(img_path)
-             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
              
              ax.imshow(img)
              ax.axis('off')

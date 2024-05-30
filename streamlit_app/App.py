@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 from utils import display_multiple_images, plot_train_data_distribution, display_multiple_images_2, evaluation_weighted, evaluation_macro, matrice_confusion, report_to_df, training_plots_accuracy, training_plots_loss, classification_rapport
 
 import warnings
